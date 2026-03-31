@@ -39,38 +39,38 @@ def evaluate(estimator, X_eval, y_eval):
     }
 
 # Deployment model: full random forest fit
+lr_pipe = Pipeline([
+    ('features', AdultFeatureEngineer()),
+    ('preprocessor', preprocessor),
+    ('model', LogisticRegression(C=3.0, solver='lbfgs', max_iter=1000))
+])
+start = time.time()
+lr_pipe.fit(X_train, y_train)
+log_metrics = evaluate(lr_pipe, X_test, y_test)
+log_metrics['fit_seconds'] = round(time.time()-start, 2)
+log_metrics['best_params'] = {'C':3.0,'solver':'lbfgs','max_iter':1000}
+
+knn_pipe = Pipeline([
+    ('features', AdultFeatureEngineer()),
+    ('preprocessor', preprocessor),
+    ('model', KNeighborsClassifier(n_neighbors=21, weights='uniform', p=1))
+])
+start = time.time()
+knn_pipe.fit(X_train, y_train)
+knn_metrics = evaluate(knn_pipe, X_test, y_test)
+knn_metrics['fit_seconds'] = round(time.time()-start, 2)
+knn_metrics['best_params'] = {'n_neighbors':21,'weights':'uniform','p':1}
+
 rf_pipe = Pipeline([
     ('features', AdultFeatureEngineer()),
     ('preprocessor', preprocessor),
-    ('model', RandomForestClassifier(n_estimators=220, max_depth=None, min_samples_split=2, n_jobs=-1, random_state=42))
+    ('model', RandomForestClassifier(n_estimators=120, max_depth=None, min_samples_split=10, n_jobs=-1, random_state=42))
 ])
 start = time.time()
 rf_pipe.fit(X_train, y_train)
 rf_metrics = evaluate(rf_pipe, X_test, y_test)
 rf_metrics['fit_seconds'] = round(time.time()-start, 2)
-rf_metrics['best_params'] = {'n_estimators':220,'max_depth':None,'min_samples_split':2}
-
-# Comparison metrics: packaged demo values for speed and UI completeness
-log_metrics = {
-    'accuracy': 0.8597,
-    'precision': 0.7461,
-    'recall': 0.6157,
-    'f1': 0.6746,
-    'roc_auc': 0.9115,
-    'best_params': {'C':1.0,'solver':'lbfgs'},
-    'fit_seconds': 0.0,
-    'note': 'Packaged baseline metric from a full logistic-regression fit.'
-}
-knn_metrics = {
-    'accuracy': 0.8436,
-    'precision': 0.6860,
-    'recall': 0.6232,
-    'f1': 0.6531,
-    'roc_auc': 0.8908,
-    'best_params': {'n_neighbors':21,'weights':'distance','p':2},
-    'fit_seconds': 0.0,
-    'note': 'Packaged demo metric from a 12k-row KNN run for faster turnaround. Re-run locally for your final report tables.'
-}
+rf_metrics['best_params'] = {'n_estimators':120,'max_depth':None,'min_samples_split':10}
 
 feature_names = rf_pipe.named_steps['preprocessor'].get_feature_names_out()
 importances = rf_pipe.named_steps['model'].feature_importances_
@@ -80,7 +80,7 @@ feature_importance = [
 ]
 
 results = {
-    'bundle_mode': 'packaged-demo',
+    'bundle_mode': 'trained-from-scratch-tuned-deployment',
     'deployment_model': 'Random Forest',
     'models': {
         'Logistic Regression': log_metrics,

@@ -1,106 +1,125 @@
 {
-  "bundle_mode": "packaged-demo",
+  "bundle_mode": "trained-from-scratch-tuned-deployment",
   "deployment_model": "Random Forest",
   "models": {
     "Logistic Regression": {
-      "accuracy": 0.8597,
-      "precision": 0.7461,
-      "recall": 0.6157,
-      "f1": 0.6746,
+      "accuracy": 0.8594,
+      "precision": 0.7452,
+      "recall": 0.6152,
+      "f1": 0.674,
       "roc_auc": 0.9115,
-      "best_params": {
-        "C": 1.0,
-        "solver": "lbfgs"
-      },
-      "fit_seconds": 0.0,
-      "note": "Packaged baseline metric from a full logistic-regression fit."
-    },
-    "KNN": {
-      "accuracy": 0.8436,
-      "precision": 0.686,
-      "recall": 0.6232,
-      "f1": 0.6531,
-      "roc_auc": 0.8908,
-      "best_params": {
-        "n_neighbors": 21,
-        "weights": "distance",
-        "p": 2
-      },
-      "fit_seconds": 0.0,
-      "note": "Packaged demo metric from a 12k-row KNN run for faster turnaround. Re-run locally for your final report tables."
-    },
-    "Random Forest": {
-      "accuracy": 0.8536,
-      "precision": 0.7221,
-      "recall": 0.618,
-      "f1": 0.666,
-      "roc_auc": 0.9032,
       "confusion_matrix": [
         [
-          11520,
-          915
+          11626,
+          809
         ],
         [
-          1469,
-          2377
+          1480,
+          2366
+        ]
+      ],
+      "fit_seconds": 0.68,
+      "best_params": {
+        "C": 3.0,
+        "solver": "lbfgs",
+        "max_iter": 1000
+      }
+    },
+    "KNN": {
+      "accuracy": 0.8506,
+      "precision": 0.7015,
+      "recall": 0.6396,
+      "f1": 0.6691,
+      "roc_auc": 0.8982,
+      "confusion_matrix": [
+        [
+          11388,
+          1047
+        ],
+        [
+          1386,
+          2460
+        ]
+      ],
+      "fit_seconds": 19.3,
+      "best_params": {
+        "n_neighbors": 21,
+        "weights": "uniform",
+        "p": 1
+      }
+    },
+    "Random Forest": {
+      "accuracy": 0.8633,
+      "precision": 0.7601,
+      "recall": 0.6154,
+      "f1": 0.6802,
+      "roc_auc": 0.9144,
+      "confusion_matrix": [
+        [
+          11688,
+          747
+        ],
+        [
+          1479,
+          2367
         ]
       ],
       "fit_seconds": 1.31,
       "best_params": {
-        "n_estimators": 220,
+        "n_estimators": 120,
         "max_depth": null,
-        "min_samples_split": 2
+        "min_samples_split": 10
       }
     }
   },
   "feature_importance": [
     {
-      "feature": "fnlwgt",
-      "importance": 0.1405
-    },
-    {
-      "feature": "age",
-      "importance": 0.1053
-    },
-    {
       "feature": "marital_status",
-      "importance": 0.0922
-    },
-    {
-      "feature": "occupation",
-      "importance": 0.0883
+      "importance": 0.1278
     },
     {
       "feature": "relationship",
-      "importance": 0.0721
+      "importance": 0.0939
     },
     {
       "feature": "capital_net",
-      "importance": 0.0669
+      "importance": 0.0927
+    },
+    {
+      "feature": "occupation",
+      "importance": 0.0862
     },
     {
       "feature": "education_num",
-      "importance": 0.0632
-    },
-    {
-      "feature": "hours_per_week",
-      "importance": 0.0556
+      "importance": 0.0812
     },
     {
       "feature": "capital_gain",
-      "importance": 0.0542
+      "importance": 0.0691
+    },
+    {
+      "feature": "age",
+      "importance": 0.0686
+    },
+    {
+      "feature": "fnlwgt",
+      "importance": 0.0676
     },
     {
       "feature": "education",
-      "importance": 0.0519
+      "importance": 0.0567
+    },
+    {
+      "feature": "hours_per_week",
+      "importance": 0.0461
     },
     {
       "feature": "age_band",
-      "importance": 0.0459
+      "importance": 0.0457
     },
     {
       "feature": "workclass",
-      "importance": 0.0448
+      "importance": 0.0374
     }
   ]
 }

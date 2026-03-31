@@ -86,7 +86,7 @@ elif page == 'Model Lab':
         models_df = pd.DataFrame(results['models']).T.reset_index().rename(columns={'index':'model'})
         cols = [c for c in ['model','accuracy','precision','recall','f1','roc_auc','fit_seconds','note'] if c in models_df.columns]
         st.dataframe(models_df[cols], use_container_width=True)
-        st.caption('Packaged note: the saved deployment model is the Random Forest. Re-run training locally for your final report tables if you want everything generated fresh.')
+        st.caption('Deployment is linked to the tuned Random Forest model saved by train_model.py. The table above reflects locally generated metrics.')
         if 'feature_importance' in results:
             st.subheader('Top feature importance')
             fi_df = pd.DataFrame(results['feature_importance'])
