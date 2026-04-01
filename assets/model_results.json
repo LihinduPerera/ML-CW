@@ -18,7 +18,7 @@
           2366
         ]
       ],
-      "fit_seconds": 0.68,
+      "fit_seconds": 0.74,
       "best_params": {
         "C": 3.0,
         "solver": "lbfgs",
@@ -41,7 +41,7 @@
           2460
         ]
       ],
-      "fit_seconds": 19.3,
+      "fit_seconds": 19.32,
       "best_params": {
         "n_neighbors": 21,
         "weights": "uniform",
@@ -64,7 +64,7 @@
           2367
         ]
       ],
-      "fit_seconds": 1.31,
+      "fit_seconds": 1.33,
       "best_params": {
         "n_estimators": 120,
         "max_depth": null,
