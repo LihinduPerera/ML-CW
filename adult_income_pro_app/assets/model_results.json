@@ -1,0 +1,106 @@
+{
+  "bundle_mode": "packaged-demo",
+  "deployment_model": "Random Forest",
+  "models": {
+    "Logistic Regression": {
+      "accuracy": 0.8597,
+      "precision": 0.7461,
+      "recall": 0.6157,
+      "f1": 0.6746,
+      "roc_auc": 0.9115,
+      "best_params": {
+        "C": 1.0,
+        "solver": "lbfgs"
+      },
+      "fit_seconds": 0.0,
+      "note": "Packaged baseline metric from a full logistic-regression fit."
+    },
+    "KNN": {
+      "accuracy": 0.8436,
+      "precision": 0.686,
+      "recall": 0.6232,
+      "f1": 0.6531,
+      "roc_auc": 0.8908,
+      "best_params": {
+        "n_neighbors": 21,
+        "weights": "distance",
+        "p": 2
+      },
+      "fit_seconds": 0.0,
+      "note": "Packaged demo metric from a 12k-row KNN run for faster turnaround. Re-run locally for your final report tables."
+    },
+    "Random Forest": {
+      "accuracy": 0.8534,
+      "precision": 0.7222,
+      "recall": 0.617,
+      "f1": 0.6655,
+      "roc_auc": 0.9013,
+      "confusion_matrix": [
+        [
+          11522,
+          913
+        ],
+        [
+          1473,
+          2373
+        ]
+      ],
+      "fit_seconds": 1.74,
+      "best_params": {
+        "n_estimators": 220,
+        "max_depth": null,
+        "min_samples_split": 2
+      }
+    }
+  },
+  "feature_importance": [
+    {
+      "feature": "fnlwgt",
+      "importance": 0.1441
+    },
+    {
+      "feature": "age",
+      "importance": 0.1067
+    },
+    {
+      "feature": "marital_status",
+      "importance": 0.0981
+    },
+    {
+      "feature": "occupation",
+      "importance": 0.0828
+    },
+    {
+      "feature": "relationship",
+      "importance": 0.0706
+    },
+    {
+      "feature": "capital_net",
+      "importance": 0.0642
+    },
+    {
+      "feature": "education_num",
+      "importance": 0.0622
+    },
+    {
+      "feature": "education",
+      "importance": 0.0561
+    },
+    {
+      "feature": "hours_per_week",
+      "importance": 0.0545
+    },
+    {
+      "feature": "capital_gain",
+      "importance": 0.0532
+    },
+    {
+      "feature": "age_band",
+      "importance": 0.046
+    },
+    {
+      "feature": "workclass",
+      "importance": 0.042
+    }
+  ]
+}
