@@ -1,0 +1,22 @@
+{
+  "logistic_regression": {
+    "C": 0.01,
+    "class_weight": "balanced",
+    "max_iter": 1000,
+    "solver": "lbfgs"
+  },
+  "svm": {
+    "C": 1.0,
+    "class_weight": "balanced",
+    "gamma": "scale",
+    "kernel": "rbf"
+  },
+  "random_forest": {
+    "class_weight": "balanced",
+    "max_depth": 40,
+    "max_features": null,
+    "min_samples_leaf": 5,
+    "min_samples_split": 5,
+    "n_estimators": 162
+  }
+}

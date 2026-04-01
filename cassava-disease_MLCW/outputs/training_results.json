@@ -1,0 +1,22 @@
+{
+  "logistic_regression": {
+    "train_accuracy": 0.998894783377542,
+    "val_accuracy": 0.6890459363957597,
+    "train_time": 19.141024589538574
+  },
+  "svm": {
+    "train_accuracy": 0.9958001768346596,
+    "val_accuracy": 0.7190812720848057,
+    "train_time": 199.96010947227478
+  },
+  "random_forest": {
+    "train_accuracy": 1.0,
+    "val_accuracy": 0.5265017667844523,
+    "train_time": 6.045914649963379
+  },
+  "cnn": {
+    "train_accuracy": 0.9958001768346596,
+    "val_accuracy": 0.7111307420494699,
+    "train_time": 3.1891674995422363
+  }
+}

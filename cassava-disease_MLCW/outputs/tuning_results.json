@@ -1,0 +1,43 @@
+{
+  "logistic_regression": {
+    "best_params": {
+      "C": 0.01,
+      "class_weight": "balanced",
+      "max_iter": 1000,
+      "solver": "lbfgs"
+    },
+    "best_cv_score": 0.5690107894713197,
+    "val_accuracy": 0.7084805653710248,
+    "val_f1_score": 0.5925668299562988,
+    "search_time": 3080.4704189300537,
+    "search_type": "GridSearchCV"
+  },
+  "svm": {
+    "best_params": {
+      "C": 1.0,
+      "class_weight": "balanced",
+      "gamma": "scale",
+      "kernel": "rbf"
+    },
+    "best_cv_score": 0.518497863923556,
+    "val_accuracy": 0.7022968197879859,
+    "val_f1_score": 0.6056716565049898,
+    "search_time": 7415.830119848251,
+    "search_type": "GridSearchCV"
+  },
+  "random_forest": {
+    "best_params": {
+      "class_weight": "balanced",
+      "max_depth": 40,
+      "max_features": null,
+      "min_samples_leaf": 5,
+      "min_samples_split": 5,
+      "n_estimators": 162
+    },
+    "best_cv_score": 0.370143840646996,
+    "val_accuracy": 0.6042402826855123,
+    "val_f1_score": 0.40783568115203794,
+    "search_time": 9086.759426355362,
+    "search_type": "RandomizedSearchCV"
+  }
+}
