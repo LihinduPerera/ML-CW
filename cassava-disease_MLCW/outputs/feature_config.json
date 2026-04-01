@@ -1,0 +1,9 @@
+{
+  "backend": "pytorch",
+  "model": "VGG16",
+  "original_feature_dim": 512,
+  "pca_components": 3201,
+  "explained_variance": 0.9482786655426025,
+  "n_train_samples": 4524,
+  "n_val_samples": 1132
+}

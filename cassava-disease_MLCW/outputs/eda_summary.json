@@ -1,0 +1,15 @@
+{
+  "total_train_images": 5656,
+  "total_test_images": 0,
+  "num_classes": 5,
+  "class_counts": {
+    "cbb": 466,
+    "cbsd": 1443,
+    "cgm": 773,
+    "cmd": 2658,
+    "healthy": 316
+  },
+  "imbalance_ratio": 8.41139240506329,
+  "mean_width": 614.058,
+  "mean_height": 567.946
+}
