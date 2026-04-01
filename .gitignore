@@ -60,8 +60,6 @@ pipenv-*.lock
 __pypackages__/
 
 # dotenv
-.env
-.env.*
 
 # virtualenv
 venv/
@@ -83,8 +81,9 @@ models/
 *.log
 
 # VS Code
-.vscode/
 
 # OS files
 .DS_Store
 Thumbs.db
+config.bat
+node_modules
