@@ -45,7 +45,7 @@
           2373
         ]
       ],
-      "fit_seconds": 1.92,
+      "fit_seconds": 1.74,
       "best_params": {
         "n_estimators": 220,
         "max_depth": null,

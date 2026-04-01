@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+.virtual_documents/
+
+# Project outputs and artifacts
+outputs/
+*.pt
+*.pth
+*.pkl
+*.joblib
+*.h5
+*.onnx
+
+# Data and local project files
+anaconda_projects/
+
+# Logs and local environment files
+*.log
+.env
+.env.*
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+outputs/
+cassava-disease/
