@@ -1,0 +1,43 @@
+{
+  "models_evaluated": [
+    "Logistic Regression",
+    "SVM (RBF)",
+    "Random Forest"
+  ],
+  "best_model": "SVM (RBF)",
+  "metrics": {
+    "Logistic Regression": {
+      "accuracy": 0.7084805653710248,
+      "precision_macro": 0.6101552579489669,
+      "recall_macro": 0.5817449621747564,
+      "f1_macro": 0.5925668299562988
+    },
+    "SVM (RBF)": {
+      "accuracy": 0.7022968197879859,
+      "precision_macro": 0.6103735289566643,
+      "recall_macro": 0.6064761002107157,
+      "f1_macro": 0.6056716565049898
+    },
+    "Random Forest": {
+      "accuracy": 0.6042402826855123,
+      "precision_macro": 0.5022227595421944,
+      "recall_macro": 0.41185782199294046,
+      "f1_macro": 0.40783568115203794
+    }
+  },
+  "auc_scores": {
+    "Logistic Regression": {
+      "macro": 0.8747581475230749,
+      "micro": 0.9130527834658942
+    },
+    "SVM (RBF)": {
+      "macro": 0.8854044327920506,
+      "micro": 0.9168157846271023
+    },
+    "Random Forest": {
+      "macro": 0.7910313262331458,
+      "micro": 0.8544624964102436
+    }
+  },
+  "misclassification_rate": 0.29770318021201414
+}
