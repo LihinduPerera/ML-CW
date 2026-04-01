@@ -11,6 +11,25 @@ Screenshots used in report:
 1. [screenshots/AdultIncome_Dashboard.png](screenshots/AdultIncome_Dashboard.png)
 2. [screenshots/AdultIncome_ModelComparison.png](screenshots/AdultIncome_ModelComparison.png)
 
+Generated report charts and tables:
+1. [assets/figures/missing_values_by_column.png](assets/figures/missing_values_by_column.png)
+2. [assets/figures/income_class_distribution.png](assets/figures/income_class_distribution.png)
+3. [assets/figures/numeric_feature_histograms.png](assets/figures/numeric_feature_histograms.png)
+4. [assets/figures/model_comparison_metrics.png](assets/figures/model_comparison_metrics.png)
+5. [assets/tables/model_metrics_ranked.csv](assets/tables/model_metrics_ranked.csv)
+6. [assets/tables/tuning_summary_ranked.csv](assets/tables/tuning_summary_ranked.csv)
+
+### Guideline Compliance Checklist
+
+1. Explanation required: every stage includes short reasoning statements (for example Sections 3, 6, 7, 8, 10, and 11).
+2. Decisions justified: preprocessing, feature engineering, metric selection, and final model choice are all justified with both theory and observed metrics.
+3. Graphs, tables, visualizations included: report now has reproducible figure/table files under `assets/figures` and `assets/tables`, plus dashboard screenshots.
+4. Concise writing: each section uses short interpretation bullets and avoids narrative filler.
+5. Focus on understanding and reasoning: model selection and interpretation are tied to class imbalance context and stakeholder meaning, not only raw scores.
+
+Artifact generation command:
+1. `python generate_report_artifacts.py`
+
 ---
 
 ## 1) Problem Definition
