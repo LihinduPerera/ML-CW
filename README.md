@@ -7,6 +7,7 @@ A polished Streamlit software package for the UCI Adult / Census Income dataset.
 ```bash
 pip install -r requirements.txt
 python train_model.py
+python generate_report_artifacts.py
 streamlit run app.py
 ```
 
@@ -16,6 +17,18 @@ streamlit run app.py
 - Model comparison page
 - Saved deployment model for live predictions
 - Prediction history download
+
+## Report evidence artifacts
+
+Generate coursework-ready graphs and tables with:
+
+```bash
+python generate_report_artifacts.py
+```
+
+This creates:
+- `assets/figures/` for charts used in the written report
+- `assets/tables/` for ranked model and tuning summary tables
 
 ## ML design
 
