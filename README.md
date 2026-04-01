@@ -2,13 +2,22 @@
 
 A polished Streamlit software package for the UCI Adult / Census Income dataset.
 
-## Run locally
+## Run locally (Python scripts)
 
 ```bash
 pip install -r requirements.txt
 python train_model.py
 streamlit run app.py
 ```
+
+## Run locally (Jupyter notebook workflow)
+
+```bash
+pip install -r requirements.txt
+jupyter notebook notebooks/adult_income_coursework.ipynb
+```
+
+Then open the notebook and run all cells from top to bottom.
 
 ## What is included
 

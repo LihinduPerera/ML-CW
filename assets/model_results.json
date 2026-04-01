@@ -30,22 +30,22 @@
       "note": "Packaged demo metric from a 12k-row KNN run for faster turnaround. Re-run locally for your final report tables."
     },
     "Random Forest": {
-      "accuracy": 0.8536,
-      "precision": 0.7221,
-      "recall": 0.618,
-      "f1": 0.666,
-      "roc_auc": 0.9032,
+      "accuracy": 0.8534,
+      "precision": 0.7222,
+      "recall": 0.617,
+      "f1": 0.6655,
+      "roc_auc": 0.9013,
       "confusion_matrix": [
         [
-          11520,
-          915
+          11522,
+          913
         ],
         [
-          1469,
-          2377
+          1473,
+          2373
         ]
       ],
-      "fit_seconds": 1.31,
+      "fit_seconds": 1.92,
       "best_params": {
         "n_estimators": 220,
         "max_depth": null,
@@ -56,51 +56,51 @@
   "feature_importance": [
     {
       "feature": "fnlwgt",
-      "importance": 0.1405
+      "importance": 0.1441
     },
     {
       "feature": "age",
-      "importance": 0.1053
+      "importance": 0.1067
     },
     {
       "feature": "marital_status",
-      "importance": 0.0922
+      "importance": 0.0981
     },
     {
       "feature": "occupation",
-      "importance": 0.0883
+      "importance": 0.0828
     },
     {
       "feature": "relationship",
-      "importance": 0.0721
+      "importance": 0.0706
     },
     {
       "feature": "capital_net",
-      "importance": 0.0669
+      "importance": 0.0642
     },
     {
       "feature": "education_num",
-      "importance": 0.0632
-    },
-    {
-      "feature": "hours_per_week",
-      "importance": 0.0556
-    },
-    {
-      "feature": "capital_gain",
-      "importance": 0.0542
+      "importance": 0.0622
     },
     {
       "feature": "education",
-      "importance": 0.0519
+      "importance": 0.0561
+    },
+    {
+      "feature": "hours_per_week",
+      "importance": 0.0545
+    },
+    {
+      "feature": "capital_gain",
+      "importance": 0.0532
     },
     {
       "feature": "age_band",
-      "importance": 0.0459
+      "importance": 0.046
     },
     {
       "feature": "workclass",
-      "importance": 0.0448
+      "importance": 0.042
     }
   ]
 }
